@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <!--meta tags will go here-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Project 1 for UNC MJ-school's MEJO 487 class">
+    <meta name="keywords" content="HTML,CSS, CSS bootcamp, CSS grid">
+    <meta name="author" content="Brooke Fisher">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS links will go here-->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/sprites.css" rel="stylesheet" type="text/css"/>
+
+    <!--link for Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+
+  </head>
+
+  <body class="site">
+    <div class="header">
+      <p class="space">
+        MINI of Raleigh
+      </p>
+      <div class="vline space"></div>
+      <span class="space"><div class="help"></div></span>
+      <div class="vline space"></div>
+      <span class="space"><div class="settings"></div></span>
+      <div class="fa fa-bars"></div>
+    </div>
+
+    <div class="menu flex">
+      <!--sprites will live inside of this div-->
+      <a href="#"><div class="dashboard"></div></a>
+      <a href="#"><div class="customers"></div></a>
+      <a href="#"><div class="messages"></div></a>
+      <a href="#"><div class="promotions"></div></a>
+      <a href="#"><div class="icon-page-creator"></div></a>
+      <a href="#"><div class="analytics"></div></a>
+    </div>
+
+    <div class="dash flex">
+      <p>Dashboard</p>
+      <span><div class="search"></div></span>
+    </div>
+
+    <div class="ann flex">
+      <span id="upper"><p>
+        Announcements
+      </p></span>
+
+      <p>
+        Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus.
+      </p>
+
+      <span class="flipped"><div class="nav-small"></div></span>
+      <span><div class="nav-small"></div></span>
+
+    </div>
+
+    <!--sidebar-->
+    <div class="side">
+      <div class="tasks-head flex-row">
+        <h1>Tasks</h1>
+        <img id="settings" src="img/settings_gray.png" alt="Gray gear representing settings"/>
+      </div>
+
+    <!--task list-->
+    <div class="tasks flex-row">
+      <span class="num-gray">1</span>
+      <p id="gray-item">Welcome Contacts</p>
+      <div class="man-counter">
+        <div class="man-gray"></div>
+        <p id="gray-num">32</p>
+      </div>
+    </div>
+
+    <div class="tasks flex-row">
+      <span class="num">2</span>
+      <p>Provide Responses</p>
+      <div class="man-counter">
+        <div class="man-blue"></div>
+        <p>36</p>
+      </div>
+    </div>
+
+    <div class="tasks flex-row">
+      <span class="num">3</span>
+      <p>Review Activity</p>
+      <div class="man-counter">
+        <div class="man-blue"></div>
+        <p>36</p>
+      </div>
+    </div>
+
+    <div class="tasks flex-row">
+      <span class="num">4</span>
+      <p>Reach Out</p>
+      <div class="man-counter">
+        <div class="man-blue"></div>
+        <p>3</p>
+      </div>
+    </div>
+
+    <!--recommendations list-->
+    <div class="rec-head flex-row">
+      <h1>Recommendations</h1>
+    </div>
+
+    <div class="rec flex-row">
+      <span><div class="article"></div></span>
+      <p>
+        Article
+      <br />
+        7 Steps to getting more Fans
+      </p>
+    </div>
+
+    <div class="rec flex-row">
+      <span><div class="article"></div></span>
+      <p>
+        Article
+      <br />
+        Increase traction with more interactions
+      </p>
+    </div>
+
+    <div class="rec flex-row">
+      <img src="img/checklist.png" alt="green checklist" />
+      <p>
+        Checklist
+      <br />
+        Creating a Promotion
+      </p>
+    </div>
+
+    <div class="rec flex-row">
+      <span><div class="tip"></div></span>
+      <p>
+        Tip
+      <br />
+        Share more
+      </p>
+    </div>
+
+    <!--closing of the sidebar-->
+    </div>
+
+    <div class="bar flex">
+      <h1>Analytics</h1>
+      <div class="activity-date">
+        <p>
+          Activity
+        </p>
+        <span class="flex-row" id="date">
+          <p>
+            06/28/11 - 07/21-11
+          </p>
+          <div class="vline space"></div>
+          <img src="img/down_arrow.png" alt="green arrow" />
+        </span>
+      </div>
+      <!--bar graph goes here-->
+      <img id="bar-graph-img" src="img/bar-graph.png" alt="bar graph representing data"/>
+    <!--closing of the bar graph div-->
+    </div>
+
+    <!--pie charts go here-->
+    <div class="pie">
+      <p>
+        CHANNELS
+      </p>
+      <img src="img/pie-1.png" alt="first pie chart" />
+      <p>
+        REFERRALS
+      </p>
+      <img src="img/pie-2.png" alt="second pie chart" />
+    </div>
+
+    <!--social media stuff goes here with custom checkboxes-->
+    <div class="social flex-row">
+      <div class="checkbox">
+        <input type="checkbox" id="checkbox_1">
+        <label for="checkbox_1" id="fb">
+          Facebook
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="checkbox_2">
+        <label for="checkbox_2" id="twitter">
+          Twitter
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="checkbox_3">
+        <label for="checkbox_3" id="foursquare">
+          Foursquare
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="checkbox_4">
+        <label for="checkbox_4" id="gplus">
+          Google+
+        </label>
+      </div>
+    </div>
+
+
+    <!--two contact boxes and graphs go here-->
+    <div class="contact flex-row">
+      <div class="blue-ribbon-left"></div>
+      <div id="contact-green">
+        <span><div class="man-green"></div></span>
+        <p>
+          75 Contacts
+        <br />
+          4 Influencers
+        </p>
+        <img src="img/green_graph.png" alt="Green graph representing growth" />
+      </div>
+      <div class="blue-ribbon-right"></div>
+
+      <!--orange contact-->
+      <div class="blue-ribbon-left"></div>
+      <div id="contact-orange">
+        <span><div class="man-orange"></div></span>
+        <p>
+          17 Customers
+        <br/>
+          0 Influencers
+        </p>
+        <img src="img/orange_graph.png" alt="An orange graph representing growth" />
+      </div>
+      <div class="blue-ribbon-right"></div>
+    <!--closing of the contact div-->
+    </div>
+
+    <!--Did you know? section-->
+    <div class="know flex">
+      <div class="cards">
+        <span class="flex" id="right"><img src="img/back_image.png" alt="A orange button for back"/></span>
+        <p>
+          DID YOU KNOW?
+          <br />
+          Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.
+        </p>
+        <span class="flex" id="left"><div class="next-button"></div></span>
+      </div>
+
+    </div>
+
+    <!--advertisements go here-->
+    <div class="ad flex">
+      <div class="flex" id="ad1">
+        <p>
+          <span id="green-text">Watch what you say</span>
+        <br />
+          Message Management
+        </p>
+      </div>
+
+      <div class="flex" id="ad2">
+        <img src="img/ad_2.png" alt="people standing in a line" />
+        <p>
+          See what others are doing with us.
+        </p>
+      </div>
+
+      <div class="flex" id="ad3">
+        <p>
+          Version 2.0 is coming
+        </p>
+      </div>
+
+    </div>
+
+    <!--gray footer information goes here-->
+    <div class="footer flex">
+      <p>
+        <span>Tutorials | Support | Blog</span>
+      </p>
+      <!--text promos go here-->
+      <div class="flex-row">
+        <p>
+          Ariel Winter <span>likes your</span> Win a Cooper Sweepstakes <span>Promotion</span>
+        </p>
+        <div class="pull-up"></div>
+      </div>
+
+      <!--the user's avatar and logout live here-->
+      <div class="flex-row">
+        <div class="avatar"></div>
+        <p>
+          Logout
+        </p>
+      </div>
+      <!--social media avatars will go here-->
+      <div class="flex-row">
+        <div class="avatar-fb-active"></div>
+        <div class="avatar-twitter"></div>
+        <div class="avatar-foursquare"></div>
+        <div class="avatar-yt"></div>
+      </div>
+
+    <!--closing of the footer div-->
+    </div>
+
+
+  </body>
+
+
+</html>

@@ -1,0 +1,628 @@
+/*Project 1 CSS sheet*/
+
+@supports (grid-area:auto){
+
+  /*main CSS grid layout*/
+  .site{
+    display: grid;
+    margin: 0;
+    width: 100%;
+    grid-template-columns: repeat(8, 1fr);/*equal size*/
+    grid-template-rows: 40px 110px 130px 50px auto auto auto auto auto auto;
+    grid-template-areas:
+      'hd hd hd hd hd hd hd hd'
+      'menu menu menu menu menu menu menu menu'
+      '. dash dash dash dash dash dash .'
+      '. ann ann ann ann ann ann .'
+      '. side side bar bar bar pie .'
+      '. side side social social social social .'
+      '. side side contact contact contact contact .'
+      '. side side know know know know .'
+      '. ad ad ad ad ad ad .'
+      'ft ft ft ft ft ft ft ft';
+    font-family: 'Proxima Nova', sans-serif;
+  }
+
+  /*setting flex*/
+  .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center
+  }
+
+  .header{
+    grid-area: hd;
+    background: #2190e8;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    font-size: 14pt;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /*creating between space for flex items*/
+  .space{
+    display: block;
+    padding: 1em;
+    flex-basis: auto;
+    text-align: center;
+  }
+
+  /*creating thin lines to go between things*/
+  .vline{
+    border-left: 1px solid #aaa;
+    height: auto;
+  }
+
+  .menu{
+    grid-area: menu;
+    background: #145489;
+    background-image: url(../img/color-overlay.png), url(../img/fade-left.png), url(../img/fade-right.png), url(../img/pinstripe.png);
+    background-position: center, left, right, center top;
+    background-repeat: no-repeat;
+    margin: 0;
+  }
+
+  .menu a{
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    position: relative;
+  }
+
+  /*adding in the drop shadow*/
+  .menu a::after{
+    content: url(../img/shadow.png);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    margin: auto;
+  }
+
+  /*making the hamburger menu invisible on desktop*/
+  .fa-bars{
+    visibility: hidden;
+  }
+
+  /*main sections of the website*/
+  .dash{
+    justify-content: space-between;
+    color: #fff;
+    font-size: 1.6em;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background: #33cc66;
+    grid-area: dash;
+    border-radius: 5px;
+  }
+
+  .dash p{
+    margin-left: 1%;
+  }
+
+  /*creating the search bar*/
+  .dash span{
+    width: 250px;
+    background: #fff;
+    border-radius: 2px;
+    text-align: right;
+    margin-right: 2%;
+  }
+
+  .dash .search{
+    margin-right: 5%;
+  }
+
+  .ann{
+    grid-area: ann;
+    border: solid 0.10px;
+    justify-content: space-between;
+    color: #777777;
+    font-size: 14px;
+  }
+
+  /*Announcements in Orange and upper case*/
+  .ann #upper{
+    color: #fe7f13;
+    text-transform: uppercase;
+    margin-left: 1%;
+    border-right: solid black 0.10px;
+    padding-right: 1%;
+  }
+
+
+  /*flipping the little nav button to face left*/
+  .ann .flipped{
+    transform: scaleX(-1);
+    padding-right: 1%;
+    border-right: solid 0.10px;
+  }
+
+  /*tasks and recommendations go here*/
+  .side{
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border: solid 0.75px black;
+    padding-bottom: 80%;
+  }
+
+  .side #settings{
+    margin-right: 4%;
+  }
+
+  .tasks-head, .tasks, .rec-head, .rec{
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .tasks, .rec{
+    border-bottom: dotted 0.10px;
+  }
+
+  /*formatting the headers 'Tasks', Recommendations, Analytics*/
+  .side h1, .bar h1{
+    font-weight: normal;
+    color: #2498f4;
+    font-size: 32px;
+  }
+
+  /*formatting the numbers*/
+  .side .num{
+    background: #3cce29;
+    color: #fff;
+    padding: 2%;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .side .num-gray{
+    background: #ccc;
+    color: #fff;
+    padding: 2%;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  /*formatting the tasks words*/
+  .side #gray-item{
+    color: #ccc;
+    text-align: left;
+  }
+
+  .tasks p{
+    color: #2498f3;
+    text-align: left;
+    flex-basis: 60%;
+  }
+
+  /*formatting the recommendations words*/
+  .rec p{
+    text-align: left;
+    flex-basis: 90%;
+    color: #777777;
+  }
+
+  /*formatting the little counters*/
+  .man-counter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    height: 25px;
+    border: solid 0.10px gray;
+    border-radius: 2px;
+    padding-left: 2%;
+  }
+
+  #gray-num{
+    color: #cccccc;
+  }
+
+  /*formatting the space between items*/
+  .num, .num-gray, .rec span, .rec img{
+    flex-basis: 18px;
+  }
+
+  /*formatting the bar graph area*/
+  .bar{
+    grid-area: bar;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 2%;
+  }
+
+  .activity-date{
+    color: #666666;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  #date{
+    border-radius: 2px;
+    border: solid 0.10px;
+    width: 175px;
+    height: 40px;
+    text-align: left;
+    align-content: center;
+  }
+
+  /*styling the bar graph*/
+  #bar-graph-img{
+    box-shadow: 4px 0px 3px -2px #aaa;
+    margin-top: 10%;
+    width: 90%;
+    height: auto;
+  }
+
+  /*styling the pie charts on the side*/
+  .pie{
+    grid-area: pie;
+    align-items: flex-start;
+    border-right: solid 0.10px;
+    color: #999999;
+  }
+
+  .pie img{
+    width: 60px;
+    height: 60px;
+  }
+
+  /*adding social media radials underneath bars*/
+  .social{
+    grid-area: social;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-right: solid 0.10px black;
+  }
+
+  .checkbox{
+    margin-right: 3%;
+  }
+
+  /*hding the default checkbox*/
+  .checkbox input[type="checkbox"]{
+    opacity: 0;
+  }
+
+  /*creating the custom checkboxes*/
+  .checkbox label{
+    position: relative;
+  }
+
+  .checkbox label::before, .checkbox label::after{
+    position: absolute;
+    content: "";
+    display: inline-block;
+  }
+
+  /*outer box*/
+  .checkbox label::before{
+    height: 15px;
+    width: 15px;
+    background: #dcdcdc;
+    border: 3px solid #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px #aaa;
+    top: -2px;
+    left: -30px;
+  }
+
+  /*checkmark*/
+  .checkbox label::after{
+    z-index: 2;
+    height: 25px;
+    width: 25px;
+    background-image: url(../img/check_orange.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    left: -28px;
+    top: -9px;
+  }
+
+  /*hiding the checkmark*/
+  .checkbox input[type="checkbox"] + label::after{
+    content: none;
+  }
+
+  .checkbox input[type="checkbox"]:checked + label::after{
+    content: "";
+  }
+
+  .checkbox input[type="checkbox"]:checked + label::before{
+    background: #fff;
+  }
+
+
+  /*styling the social media words*/
+  #fb, #twitter, #foursquare, #gplus{
+    border-radius: 5px;
+    width: auto;
+    height: 16px;
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+    padding-right: 2px;
+  }
+
+  #fb{
+    background: #114570;
+  }
+
+  #twitter{
+    background: #2298f4;
+  }
+
+  #foursquare{
+    background: #3a599b;
+  }
+
+  #gplus{
+    background: #31cc66;
+  }
+
+
+  /*styling for the contact cards*/
+  .contact{
+    grid-area: contact;
+    text-transform: uppercase;
+    justify-content: center;
+    color: #fff;
+    border: solid 0.10px black;
+    text-align: center;
+  }
+
+  .contact p{
+    background: #2394ee;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  #contact-orange, #contact-green{
+    box-shadow: 1px 1px 3px #aaa;
+    border-radius: 5px;
+  }
+
+  /*styling for the know cards*/
+  .know{
+    grid-area: know;
+    border: solid 0.10px;
+  }
+
+  .know .cards{
+    background: #2498f4;
+    width: 85%;
+    height: 85%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 2px;
+  }
+
+  .cards p{
+    color: #fff;
+    margin-left: 1%;
+  }
+
+
+  /*creating the semi-circles*/
+  .cards span{
+    background: #fff;
+    padding: 1%;
+    height: 50px;
+    width: 25px;
+  }
+
+  #right{
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  #left{
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+
+  /*styling for the bottom three ads*/
+  .ad{
+      grid-area: ad;
+      justify-content: space-around;
+      background: #2498f4;
+      padding: 2%;
+      margin-bottom: 5%;
+      box-shadow: 0px 0px 3px #aaa;
+  }
+
+  /*adding in ad images*/
+
+  #ad1, #ad2, #ad3{
+    border-radius: 5px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    width: 278px;
+    height: 152px;
+    box-shadow: 0px 0px 2px #222;
+    position: relative;
+  }
+
+  #ad1{
+    background-image: url(../img/ad_1.png);
+    color: #666666;
+    text-align: right;
+    justify-content: flex-end;
+  }
+
+  #ad1 p{
+    margin-right: 2%;
+    width: 40%;
+  }
+
+  #green-text{
+    color: #33cc66;
+    font-size: 20px;
+  }
+
+  #ad2{
+    text-align: center;
+    color: #fff;
+  }
+
+  #ad2 img{
+    position: absolute;
+    top: -8%;
+    width: 258px;
+    height: auto;
+    z-index: 2;
+  }
+
+  #ad2 p{
+    z-index: 3;
+    border-radius: 4px;
+    background: #33cc66;
+    padding: 3%;
+    font-size: 1em;
+  }
+
+  #ad3{
+    background-image: url(../img/ad_3.png);
+    background-position: right top;
+    text-align: left;
+    color: #fe7f13;
+    font-size: 20px;
+    justify-content: flex-start;
+  }
+
+  #ad3 p{
+    width: 40%;
+    margin-left: 2%;
+  }
+
+  /*bottom of the website*/
+  .footer{
+    grid-area: ft;
+    background: #f5f5f5;
+    justify-content: space-around;
+    color: #2498f2;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    /*adding in drop shadow*/
+    box-shadow: 0px -5px 10px #ddd;
+  }
+
+
+
+  /*non blue text in the footer*/
+  .footer span{
+    color: #777;
+    font-weight: normal;
+  }
+
+  /*avatar & logout styling*/
+  .footer .avatar{
+    border-radius: 5px;
+    border: solid #fff 5px;
+  }
+
+  /*media queries to be mobile-friendly*/
+  @media screen and (max-width: 670px){
+
+    /*hiding the menu version*/
+    .site{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 40px 40px 25px 300px 200px 75px 100px 50px;
+      grid-template-areas:
+        'hd hd hd hd'
+        'dash dash dash dash'
+        'ann ann ann ann'
+        'side side side side'
+        'bar bar bar bar'
+        'pie pie pie pie'
+        'contact contact contact contact'
+        'know know know know'
+        'ad ad ad ad'
+        'ft ft ft ft';
+    }
+
+    .header{
+      grid-area: hd;
+    }
+
+    /*menu is hidden here*/
+    .menu{
+      visibility: hidden;
+    }
+
+    .dash{
+      grid-area: dash;
+    }
+
+    .ann{
+      grid-area: ann;
+    }
+
+    .side{
+      grid-area: side;
+    }
+
+    .bar{
+      grid-area: bar;
+    }
+
+    .pie{
+      grid-area: pie;
+    }
+
+    .contact{
+      grid-area: know;
+    }
+
+    .know{
+      grid-area: know;
+    }
+
+    .ad{
+      grid-area: ad;
+    }
+
+    .footer{
+      grid-area: ft;
+    }
+  }
+
+}
