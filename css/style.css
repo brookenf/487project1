@@ -198,32 +198,29 @@
     text-align: center;
   }
 
-  .side .num-gray{
-    background: #ccc;
-    color: #fff;
-    padding: 2%;
-    border-radius: 50%;
-    text-align: center;
-  }
-
-  /*formatting the tasks words*/
-  .side #gray-item{
-    color: #ccc;
-    text-align: left;
-  }
-
   .tasks p{
     color: #2498f3;
     text-align: left;
     flex-basis: 60%;
   }
 
-  /*formatting the recommendations words*/
+  /*setting the hover*/
+  .tasks:hover{
+    filter: grayscale(90%);
+  }
+
+  /*formatting the recommendations*/
+  .rec:hover{
+    filter: grayscale(100%);
+  }
+
   .rec p{
     text-align: left;
     flex-basis: 90%;
     color: #777777;
   }
+
+
 
   /*formatting the little counters*/
   .man-counter{
@@ -238,12 +235,11 @@
     padding-left: 2%;
   }
 
-  #gray-num{
-    color: #cccccc;
-  }
+  /*making them gray when they hover*/
+
 
   /*formatting the space between items*/
-  .num, .num-gray, .rec span, .rec img{
+  .num, .rec span, .rec img{
     flex-basis: 18px;
   }
 
@@ -265,14 +261,7 @@
     justify-content: space-around;
   }
 
-  #date{
-    border-radius: 2px;
-    border: solid 0.10px;
-    width: 175px;
-    height: 40px;
-    text-align: left;
-    align-content: center;
-  }
+  /*adding in the CSS to create a pure css dropdown menu*/
 
   /*styling the bar graph*/
   #bar-graph-img{
@@ -399,6 +388,11 @@
     color: #fff;
     border: solid 0.10px black;
     text-align: center;
+  }
+
+  /*making it black and white on hover*/
+  .contact:hover{
+    filter: grayscale(100%);
   }
 
   .contact p{
