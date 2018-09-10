@@ -107,6 +107,7 @@
   /*main sections of the website*/
   .dash{
     justify-content: space-between;
+    align-content: center;
     color: #fff;
     font-size: 1.6em;
     margin-top: 3%;
@@ -114,6 +115,18 @@
     background: #33cc66;
     grid-area: dash;
     border-radius: 5px;
+  }
+
+  .dash input[type="text"]{
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../img/search.png');
+    background-position: top right;
+    background-repeat: no-repeat;
   }
 
   .dash p{
@@ -204,7 +217,7 @@
     flex-basis: 60%;
   }
 
-  /*setting the hover*/
+  /*setting the hover status*/
   .tasks:hover{
     filter: grayscale(90%);
   }
@@ -220,8 +233,6 @@
     color: #777777;
   }
 
-
-
   /*formatting the little counters*/
   .man-counter{
     display: flex;
@@ -234,9 +245,6 @@
     border-radius: 2px;
     padding-left: 2%;
   }
-
-  /*making them gray when they hover*/
-
 
   /*formatting the space between items*/
   .num, .rec span, .rec img{
