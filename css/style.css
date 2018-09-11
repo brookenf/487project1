@@ -77,7 +77,7 @@
   .menu{
     grid-area: menu;
     background: #145489;
-    background-image: url(../img/color-overlay.png), url(../img/fade-left.png), url(../img/fade-right.png), url(../img/pinstripe.png);
+    background-image: url(../img/color-overlay.png),url(../img/fade-left.png), url(../img/fade-right.png), url(../img/pinstripe.png);
     background-position: center, left, right, center top;
     background-repeat: no-repeat;
     margin: 0;
@@ -94,14 +94,9 @@
   .menu a::after{
     content: url(../img/shadow.png);
     position: absolute;
-    left: 0;
-    bottom: -2px;
+    left: 2%;
+    bottom: -2%;
     margin: auto;
-  }
-
-  /*making the hamburger menu invisible on desktop*/
-  .fa-bars{
-    visibility: hidden;
   }
 
   /*main sections of the website*/
@@ -127,6 +122,10 @@
     background-image: url('../img/search.png');
     background-position: top right;
     background-repeat: no-repeat;
+  }
+
+  .dash form{
+    margin-right: 2%;
   }
 
   .dash p{
@@ -219,10 +218,14 @@
 
   /*setting the hover status*/
   .tasks:hover{
-    filter: grayscale(90%);
+    filter: grayscale(100%);
   }
 
   /*formatting the recommendations*/
+  .rec{
+    position: relative;
+  }
+
   .rec:hover{
     filter: grayscale(100%);
   }
@@ -270,6 +273,19 @@
   }
 
   /*adding in the CSS to create a pure css dropdown menu*/
+  .select select{
+    border: solid 0.10px #aaa; /*Removes border*/
+     -webkit-appearance: none;  /*Removes default chrome and safari style*/
+     -moz-appearance: none;
+     appearance: none;
+      background: url('../img/down_arrow.png')  no-repeat;
+      background-position: right;/*Position of the background-image*/
+     width: 200px;
+     padding: 5%;
+     border-radius: 4%;
+     box-shadow: 0px 0px 3px #ddd;
+    }
+
 
   /*styling the bar graph*/
   #bar-graph-img{
@@ -392,27 +408,36 @@
   .contact{
     grid-area: contact;
     text-transform: uppercase;
-    justify-content: center;
+    justify-content: space-around;
     color: #fff;
     border: solid 0.10px black;
     text-align: center;
   }
 
-  /*making it black and white on hover*/
-  .contact:hover{
-    filter: grayscale(100%);
-  }
-
   .contact p{
     background: #2394ee;
     margin-top: 0;
-    padding: 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
     width: 100%;
   }
 
   #contact-orange, #contact-green{
     box-shadow: 1px 1px 3px #aaa;
     border-radius: 5px;
+  }
+
+  #contact-orange img, #contact-green img{
+    padding: 0px 10px 10px 10px;
+  }
+
+  #content-orange span, #content-green span{
+    z-index: 2;
+  }
+
+  /*making the contacts gray*/
+  .contact-container:hover{
+    filter: grayscale(100%);
   }
 
   /*styling for the know cards*/
@@ -546,12 +571,19 @@
     box-shadow: 0px -5px 10px #ddd;
   }
 
-
-
   /*non blue text in the footer*/
   .footer span{
     color: #777;
     font-weight: normal;
+  }
+
+  .footer a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer a:hover{
+    text-decoration: underline;
   }
 
   /*avatar & logout styling*/
@@ -561,70 +593,3 @@
   }
 
   /*media queries to be mobile-friendly*/
-  @media screen and (max-width: 670px){
-
-    /*hiding the menu version*/
-    .site{
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 40px 40px 25px 300px 200px 75px 100px 50px;
-      grid-template-areas:
-        'hd hd hd hd'
-        'dash dash dash dash'
-        'ann ann ann ann'
-        'side side side side'
-        'bar bar bar bar'
-        'pie pie pie pie'
-        'contact contact contact contact'
-        'know know know know'
-        'ad ad ad ad'
-        'ft ft ft ft';
-    }
-
-    .header{
-      grid-area: hd;
-    }
-
-    /*menu is hidden here*/
-    .menu{
-      visibility: hidden;
-    }
-
-    .dash{
-      grid-area: dash;
-    }
-
-    .ann{
-      grid-area: ann;
-    }
-
-    .side{
-      grid-area: side;
-    }
-
-    .bar{
-      grid-area: bar;
-    }
-
-    .pie{
-      grid-area: pie;
-    }
-
-    .contact{
-      grid-area: know;
-    }
-
-    .know{
-      grid-area: know;
-    }
-
-    .ad{
-      grid-area: ad;
-    }
-
-    .footer{
-      grid-area: ft;
-    }
-  }
-
-}
