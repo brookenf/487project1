@@ -36,7 +36,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .flex-column{
@@ -54,30 +54,33 @@
     font-weight: bold;
     font-size: 14pt;
     color: #fff;
-    text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
   }
 
-  /*creating between space for flex items*/
-  .space{
-    display: block;
-    padding: 1em;
-    flex-basis: auto;
-    text-align: center;
+  .header .grow{
+    flex-basis: 20%;
+    justify-content: space-evenly;
+    align-content: center;
   }
 
-  /*creating thin lines to go between things*/
-  .vline{
-    border-left: 1px solid #aaa;
-    height: auto;
+  /*making the top header stuff grow on hover*/
+  .grow a{
+    text-decoration: none;
+    color: inherit;
   }
 
+  .grow a:hover{
+    transform: scale(1.2, 1.2);
+  }
+
+  /*css for the menu icons*/
   .menu{
     grid-area: menu;
     background: #145489;
-    background-image: url(../img/color-overlay.png),url(../img/fade-left.png), url(../img/fade-right.png), url(../img/pinstripe.png);
+    background-image: url(../img/color-overlay.png),url(../img/fade-left.png),url(../img/fade-right.png), url(../img/pinstripe.png);
     background-position: center, left, right, center top;
     background-repeat: no-repeat;
     margin: 0;
@@ -148,7 +151,8 @@
   .ann{
     grid-area: ann;
     border: solid 0.10px;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-content: center;
     color: #777777;
     font-size: 14px;
   }
@@ -157,18 +161,43 @@
   .ann #upper{
     color: #fe7f13;
     text-transform: uppercase;
-    margin-left: 1%;
-    border-right: solid black 0.10px;
+    text-align: center;
     padding-right: 1%;
+    flex-basis: 15%;
+    position: relative;
   }
 
+  #upper::after{
+    content: '';
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #aaa;
+  }
+
+  #ann-words{
+    margin-left: 2%;
+  }
+
+  #ann-words::after{
+    content: '';
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #aaa;
+  }
 
   /*flipping the little nav button to face left*/
-  .ann .flipped{
+  #flipped{
     transform: scaleX(-1);
-    padding-right: 1%;
-    border-right: solid 0.10px;
+    margin: 0 2% 0 2%;
+    flex-basis: 15%;
   }
+
 
   /*tasks and recommendations go here*/
   .side{
@@ -234,6 +263,10 @@
     text-align: left;
     flex-basis: 90%;
     color: #777777;
+  }
+
+  .rec p:hover{
+    color: #000;
   }
 
   /*formatting the little counters*/
@@ -417,14 +450,15 @@
   .contact p{
     background: #2394ee;
     margin-top: 0;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     width: 100%;
   }
 
   #contact-orange, #contact-green{
     box-shadow: 1px 1px 3px #aaa;
     border-radius: 5px;
+    position: relative;
   }
 
   #contact-orange img, #contact-green img{
@@ -438,6 +472,23 @@
   /*making the contacts gray*/
   .contact-container:hover{
     filter: grayscale(100%);
+  }
+
+  /*adding in the little blue things on the side*/
+  .contact-words::before{
+    content: url(../img/blue_ribbon_left.png);
+    position: absolute;
+    left: -7%;
+    top: 36%;
+    z-index: 3;
+  }
+
+  .contact-words::after{
+    content: url(../img/blue_ribbon_right.png);
+    position: absolute;
+    right: -7%;
+    top: 36%;
+    z-index: 3;
   }
 
   /*styling for the know cards*/
@@ -495,7 +546,6 @@
   }
 
   /*adding in ad images*/
-
   #ad1, #ad2, #ad3{
     border-radius: 5px;
     background-color: #fff;
@@ -590,6 +640,42 @@
   .footer .avatar{
     border-radius: 5px;
     border: solid #fff 5px;
+    position: relative;
+  }
+
+  .footer .sprite{
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  /* lines between the footer elements */
+  #footer-link::after{
+    content: '';
+    width: 0.1px;
+    border-right: solid #ccc;
+    height: 100%;
+    right: 0;
+    top: 0;
   }
 
   /*media queries to be mobile-friendly*/
+  @media screen and (max-width:800px){
+    .site{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(12, auto);
+      grid-template-areas:
+        'hd hd hd hd'
+        'menu menu menu menu'
+        'dash dash dash dash'
+        'ann ann ann ann'
+        'side side side side'
+        'bar bar bar bar'
+        'pie pie pie pie'
+        'social social social social'
+        'contact contact contact contact'
+        'know know know know'
+        'ad ad ad ad'
+        'ft ft ft ft'
+    }
+  }

@@ -18,13 +18,25 @@
 
   <body class="site">
     <div class="header">
-      <p class="space">
-        MINI of Raleigh
+      <p>
+        Social Stream
       </p>
-      <div class="vline space"></div>
-      <span class="space"><div class="help"></div></span>
-      <div class="vline space"></div>
-      <span class="space"><div class="settings"></div></span>
+      <div class="grow flex-row">
+        <a href="#">
+          <p>
+            MINI of Raleigh
+          </p>
+        </a>
+        <img src="img/spacer.png" alt="gradient spacer"/>
+        <a href="#">
+          <div class="help"></div>
+        </a>
+        <img src="img/spacer.png" alt="gradient spacer"/>
+        <a href="#">
+          <div class="settings"></div>
+        </a>
+      </div>
+    <!--closing of header-->
     </div>
 
     <div class="menu flex">
@@ -58,17 +70,28 @@
     </div>
 
     <!--gradient bg goes here-->
-    <div class="ann flex">
-      <span id="upper"><p>
-        Announcements
-      </p></span>
+    <div class="ann flex-row">
+      <div id="upper">
+        <p>
+          Announcements
+        </p>
+      </div>
 
-      <p>
-        Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus.
-      </p>
-
-      <span class="flipped"><a href="#"><div class="nav-small"></div></a></span>
-      <a href="#"><span><div class="nav-small"></div></span></a>
+      <span id="ann-words">
+        <p>
+          Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus.
+        </p>
+      </span>
+      <span id="flipped">
+        <a href="#">
+          <div class="nav-small"></div>
+        </a>
+      </span>
+      <a href="#">
+        <span id="right-arrow">
+          <div class="nav-small"></div>
+        </span>
+      </a>
     </div>
 
     <!--sidebar-->
@@ -248,33 +271,35 @@
     <!--two contact boxes and graphs go here-->
     <div class="contact flex-row">
       <div class="contact-container">
-        <div class="blue-ribbon-left"></div>
         <div id="contact-green">
           <span>
             <div class="man-green"></div>
           </span>
-          <p>
-            75 Contacts
-          <br />
-            4 Influencers
-          </p>
+          <div class="contact-words">
+            <p>
+              75 Contacts
+            <br />
+              4 Influencers
+            </p>
+          </div>
           <img src="img/green_graph.png" alt="Green graph representing growth" />
         </div>
-        <div class="blue-ribbon-right"></div>
       </div>
       <!--orange contact-->
       <div class="contact-container">
-        <div class="blue-ribbon-left"></div>
         <div id="contact-orange">
-          <span><div class="man-orange"></div></span>
-          <p>
-            17 Customers
-          <br/>
-            0 Influencers
-          </p>
+          <span>
+            <div class="man-orange"></div>
+          </span>
+          <div class="contact-words">
+            <p>
+              17 Customers
+            <br/>
+              0 Influencers
+            </p>
+          </div>
           <img src="img/orange_graph.png" alt="An orange graph representing growth" />
         </div>
-        <div class="blue-ribbon-right"></div>
       </div>
     <!--closing of the contact div-->
     </div>
@@ -321,29 +346,35 @@
     <!--gray footer information goes here-->
     <div class="footer flex">
       <p>
-        <span><a href="#">Tutorials</a> | <a href="#">Support</a> | <a href="#">Blog</a></span>
+        <span id="footer-link">
+          <a href="#">Tutorials</a> | <a href="#">Support</a> |
+          <a href="#">Blog</a>
+        </span>
       </p>
       <!--text promos go here-->
       <div class="flex-row">
         <p>
-          <a href="#">Ariel Winter</a><span> likes your</span> <a href="#">Win a Cooper Sweepstakes</a> <span>Promotion</span>
+          <a href="#">Ariel Winter</a>
+          <span> likes your</span>
+          <a href="#">Win a Cooper Sweepstakes</a> <span>Promotion</span>
         </p>
-        <div class="pull-up"></div>
+        <div class="sprite pull-up"></div>
       </div>
 
       <!--the user's avatar and logout live here-->
       <div class="flex-row">
-        <div class="avatar"></div>
+        <div class="sprite avatar"></div>
         <a href="#">
           Logout
         </a>
       </div>
+
       <!--social media avatars will go here-->
       <div class="flex-row">
-        <div class="avatar-fb-active"></div>
-        <div class="avatar-twitter"></div>
-        <div class="avatar-foursquare"></div>
-        <div class="avatar-yt"></div>
+        <div class="sprite avatar-fb-active"></div>
+        <div class="sprite avatar-twitter"></div>
+        <div class="sprite avatar-foursquare"></div>
+        <div class="sprite avatar-yt"></div>
       </div>
 
     <!--closing of the footer div-->
