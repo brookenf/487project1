@@ -1,7 +1,6 @@
 /*Project 1 CSS sheet*/
 
 @supports (grid-area:auto){
-
   /*main CSS grid layout*/
   .site{
     display: grid;
@@ -50,7 +49,7 @@
   .header{
     grid-area: hd;
     background: #2190e8;
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova', sans-serif;
     font-weight: bold;
     font-size: 0.8em;
     color: #fff;
@@ -97,9 +96,24 @@
   .menu a::after{
     content: url(../img/shadow.png);
     position: absolute;
-    left: 2%;
+    left: 20%;
     bottom: -2%;
     margin: auto;
+  }
+
+  a#triangle::after{
+    /*adding in the triangle*/
+      bottom: -13%;
+    	left: 50%;
+    	border: solid transparent;
+    	content: '';
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    	border-bottom-color: #fff;
+    	border-width: 20px;
+    	margin-left: -20px;
   }
 
   /*main sections of the website*/
@@ -113,6 +127,7 @@
     background: #33cc66;
     grid-area: dash;
     border-radius: 5px;
+    position: relative;
   }
 
   .dash input[type="text"]{
@@ -155,23 +170,6 @@
     color: #777777;
     font-size: 0.9em;
     box-shadow: 0px 0px 2px #aaa;
-    /*bg gradient*/
-    /* border-top: 8px solid #aaa;
-    background-image: -webkit-linear-gradient(#aaa, transparent);
-    background-image:
-      -moz-linear-gradient(#aaa, transparent),
-      -moz-linear-gradient(#aaa, transparent);
-    background-image:
-      -o-linear-gradient(#aaa, transparent),
-      -o-linear-gradient(#aaa, transparent);
-    background-image:
-      linear-gradient(#aaa, transparent),
-      linear-gradient(#aaa, transparent);
-    -moz-background-size: 8px 100%;
-    background-size: 8px 100%;
-    background-position: 0 0, 100% 0;
-    background-repeat: no-repeat; */
-    /* border-radius: 5px; */
   }
 
   /*Announcements in Orange and upper case*/
