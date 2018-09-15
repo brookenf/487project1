@@ -327,32 +327,59 @@
   .activity-date-graph{
     margin-top: 5%;
     width: 150%;
-    text-transform: uppercase;
     box-shadow: 4px 0px 3px -2px #aaa;
     flex-basis: 67%;
     margin-right: 4%;
   }
 
+
   .pie{
     flex-basis: 28%;
   }
+
   /*adding in the CSS to create custom dropdown*/
-  .select{
-    margin-right: 2%;
+  .dropbtn {
+    color: #666666;
+    font-family: 'Proxima Nova', sans-serif;
+    background-color: #fff;
+    border-radius: 3px;
+    width: 120%;
+    padding: 10% 2% 10% 2%;
+    font-size: 0.9em;
+    border: 0.10px solid #aaa;
   }
 
-  .select select{
-    border: solid 0.10px #aaa; /*Removes border*/
-     -webkit-appearance: none;  /*Removes default chrome and safari style*/
-     -moz-appearance: none;
-     appearance: none;
-      background: url('../img/down_arrow.png')  no-repeat;
-      background-position: right;/*Position of the background-image*/
-     width: 100%;
-     padding: 5%;
-     border-radius: 4%;
-     box-shadow: 0px 0px 3px #ddd;
-    }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    color: #666666;
+    box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.3);
+    z-index: 1;
+    width: 120%;
+  }
+
+  .dropdown-content a {
+      color: inherit;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      background-color: #fff;
+      font-size: inherit;
+      border-bottom: solid #ddd 0.03px;
+  }
+
+  .dropdown-content a:hover{
+    color: #fe7f13;
+  }
+
+  .dropdown:hover .dropdown-content{
+    display: block;
+  }
 
   /*styling the bar graph*/
   #bar-graph-img{

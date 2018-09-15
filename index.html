@@ -200,25 +200,27 @@
         <div class="activity-date-graph flex-column">
           <div class="flex-row">
             <p>
-              Activity
+              ACTIVITY
             </p>
             <!--dropdown menu-->
-            <div class="select flex-row">
-              <select>
-                <option>
-                  06/28/11 - 07/21-11
-                </option>
-                <option value="1">
+            <div class="dropdown">
+              <button class="dropbtn flex-row">
+                06/28/11 - 07/21/11
+              <img src="img/down_arrow.png" alt="orange button" />
+              </button>
+              <div class="dropdown-content">
+                <a href="#">
                   07/21/11 - 08/14/11
-                </option>
-                <option value="2">
+                </a>
+                <a href="#">
                   08/14/11 - 09/07/11
-                </option>
-                <option value="3">
+                </a>
+                <a href="#">
                   09/07/11 - end of time
-                </option>
-              </select>
+                </a>
+              </div>
             </div>
+          <!--closing of the button/activity row-->
           </div>
           <!--graphs goes here-->
           <img id="bar-graph-img" src="img/bar-graph.png" alt="bar graph representing data"/>
