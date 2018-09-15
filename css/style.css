@@ -14,7 +14,7 @@
       'menu menu menu menu menu menu menu menu'
       '. dash dash dash dash dash dash .'
       '. ann ann ann ann ann ann .'
-      '. side side bar bar bar pie .'
+      '. side side bar bar bar bar .'
       '. side side social social social social .'
       '. side side contact contact contact contact .'
       '. side side know know know know .'
@@ -52,7 +52,7 @@
     background: #2190e8;
     font-family: 'Proxima Nova';
     font-weight: bold;
-    font-size: 14pt;
+    font-size: 0.8em;
     color: #fff;
     display: flex;
     flex-direction: row;
@@ -154,8 +154,9 @@
     align-content: center;
     color: #777777;
     font-size: 0.9em;
+    box-shadow: 0px 0px 2px #aaa;
     /*bg gradient*/
-    border-top: 8px solid #aaa;
+    /* border-top: 8px solid #aaa;
     background-image: -webkit-linear-gradient(#aaa, transparent);
     background-image:
       -moz-linear-gradient(#aaa, transparent),
@@ -169,8 +170,8 @@
     -moz-background-size: 8px 100%;
     background-size: 8px 100%;
     background-position: 0 0, 100% 0;
-    background-repeat: no-repeat;
-    border-radius: 5px;
+    background-repeat: no-repeat; */
+    /* border-radius: 5px; */
   }
 
   /*Announcements in Orange and upper case*/
@@ -186,7 +187,7 @@
   #upper::after{
     content: '';
     height: 100%;
-    width: 1px;
+    width: 0.1px;
     position: absolute;
     right: 0;
     top: 0;
@@ -197,7 +198,7 @@
     margin-left: 2%;
   }
 
-  #ann-words::after{
+  #flipped::before{
     content: '';
     height: 100%;
     width: 1px;
@@ -212,6 +213,7 @@
     transform: scaleX(-1);
     margin: 0 2% 0 2%;
     flex-basis: 15%;
+    position: relative;
   }
 
 
@@ -222,7 +224,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    border: solid 0.75px #aaa;
+    box-shadow: 0px 0px 2px #aaa;
     padding-bottom: 80%;
   }
 
@@ -319,21 +321,28 @@
   .bar{
     grid-area: bar;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     margin-left: 2%;
-  }
-
-  .activity-date{
+    border-right: 0.10px #ccc solid;
     color: #666666;
-    display: flex;
-    align-items: center;
-    margin-top: 5%;
-    width: 100%;
-    justify-content: space-around;
   }
 
-  /*adding in the CSS to create a pure css dropdown menu*/
+  .activity-date-graph{
+    margin-top: 5%;
+    width: 150%;
+    text-transform: uppercase;
+    box-shadow: 4px 0px 3px -2px #aaa;
+    flex-basis: 67%;
+    margin-right: 4%;
+  }
+
+  .pie{
+    flex-basis: 28%;
+  }
+  /*adding in the CSS to create custom dropdown*/
+  .select{
+    margin-right: 2%;
+  }
+
   .select select{
     border: solid 0.10px #aaa; /*Removes border*/
      -webkit-appearance: none;  /*Removes default chrome and safari style*/
@@ -341,33 +350,17 @@
      appearance: none;
       background: url('../img/down_arrow.png')  no-repeat;
       background-position: right;/*Position of the background-image*/
-     width: 200px;
+     width: 100%;
      padding: 5%;
      border-radius: 4%;
      box-shadow: 0px 0px 3px #ddd;
     }
 
-
   /*styling the bar graph*/
   #bar-graph-img{
-    box-shadow: 4px 0px 3px -2px #aaa;
     margin-top: 10%;
-    width: 90%;
+    width: 100%;
     height: auto;
-  }
-
-  /*styling the pie charts on the side*/
-  .pie{
-    grid-area: pie;
-    align-items: flex-start;
-    border-right: solid 0.10px #aaa;
-    color: #999999;
-    font-size: 0.8em;
-  }
-
-  .pie img{
-    width: 60px;
-    height: 60px;
   }
 
   /*adding social media radials underneath bars*/
@@ -473,7 +466,7 @@
     text-transform: uppercase;
     justify-content: space-around;
     color: #fff;
-    border: solid 0.10px #aaa;
+    box-shadow: 1px 0px 2px #aaa;
     text-align: center;
   }
 
@@ -524,7 +517,7 @@
   /*styling for the know cards*/
   .know{
     grid-area: know;
-    border: #aaa solid 0.10px;
+    box-shadow: 0px 0px 2px #aaa;
     font-size: 0.9em;
   }
 
@@ -573,7 +566,7 @@
       background: #2498f4;
       padding: 2%;
       margin-bottom: 5%;
-      box-shadow: 0px 0px 3px #aaa;
+      box-shadow: 0px 0px 2px #aaa;
   }
 
   /*adding in ad images*/
@@ -679,16 +672,6 @@
     margin-right: 8px;
   }
 
-  /* lines between the footer elements */
-  #footer-link::after{
-    content: '';
-    width: 0.1px;
-    border-right: solid #aaa;
-    height: 100%;
-    right: 0;
-    top: 0;
-  }
-
   /*media queries to be mobile-friendly*/
   @media screen and (max-width:800px){
     .site{
@@ -702,12 +685,15 @@
         'ann ann ann ann'
         'side side side side'
         'bar bar bar bar'
-        'pie pie pie pie'
         'social social social social'
         'contact contact contact contact'
         'know know know know'
         'ad ad ad ad'
         'ft ft ft ft';
+    }
+
+    .menu a{
+      width: 7%;
     }
 
     .side{
@@ -756,6 +742,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      margin-top: 3%;
     }
 
   /*end of the CSS*/

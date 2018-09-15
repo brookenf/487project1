@@ -190,51 +190,61 @@
         Share more
       </p>
     </div>
-
     <!--closing of the sidebar-->
     </div>
 
-    <div class="bar flex">
+    <!--analytics section-->
+    <div class="bar">
       <h1>Analytics</h1>
-      <div class="activity-date">
-        <p>
-          Activity
-        </p>
-        <!--dropdown menu-->
-        <div class="select flex-row">
-          <select>
-            <option>
-              06/28/11 - 07/21-11
-            </option>
-            <option value="1">
-              07/21/11 - 08/14/11
-            </option>
-            <option value="2">
-              08/14/11 - 09/07/11
-            </option>
-            <option value="3">
-              09/07/11 - end of time
-            </option>
-          </select>
+      <div class="graphs flex">
+        <div class="activity-date-graph flex-column">
+          <div class="flex-row">
+            <p>
+              Activity
+            </p>
+            <!--dropdown menu-->
+            <div class="select flex-row">
+              <select>
+                <option>
+                  06/28/11 - 07/21-11
+                </option>
+                <option value="1">
+                  07/21/11 - 08/14/11
+                </option>
+                <option value="2">
+                  08/14/11 - 09/07/11
+                </option>
+                <option value="3">
+                  09/07/11 - end of time
+                </option>
+              </select>
+            </div>
+          </div>
+          <!--graphs goes here-->
+          <img id="bar-graph-img" src="img/bar-graph.png" alt="bar graph representing data"/>
+        <!--closing of activity-date-graph-->
         </div>
-      <!--closing of activity-date-->
+        <!--pie charts go here-->
+        <div class="pie">
+          <div id="pie-1">
+            <p>
+              CHANNELS
+            </p>
+            <img src="img/pie-1.png" alt="first pie chart" />
+          </div>
+          <div id="pie-2">
+            <p>
+              REFERRALS
+            </p>
+            <img src="img/pie-2.png" alt="second pie chart" />
+          </div>
+        </div>
+        <!--closing of the graphs div-->
       </div>
-      <!--bar graph goes here-->
-      <img id="bar-graph-img" src="img/bar-graph.png" alt="bar graph representing data"/>
-    <!--closing of the bar graph div-->
+    <!--closing of the bar div-->
     </div>
 
-    <!--pie charts go here-->
-    <div class="pie">
-      <p>
-        CHANNELS
-      </p>
-      <img src="img/pie-1.png" alt="first pie chart" />
-      <p>
-        REFERRALS
-      </p>
-      <img src="img/pie-2.png" alt="second pie chart" />
-    </div>
+
 
     <!--social media stuff goes here with custom checkboxes-->
     <div class="social flex-row">
