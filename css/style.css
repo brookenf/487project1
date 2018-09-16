@@ -7,7 +7,7 @@
     margin: 0;
     width: 100%;
     grid-template-columns: repeat(8, 1fr);/*equal size*/
-    grid-template-rows: 40px 110px 130px 50px auto auto auto auto auto auto;
+    grid-template-rows: repeat(10, auto);
     grid-template-areas:
       'hd hd hd hd hd hd hd hd'
       'menu menu menu menu menu menu menu menu'
@@ -182,21 +182,8 @@
     position: relative;
   }
 
-  #upper::after{
-    content: '';
-    height: 100%;
-    width: 0.1px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #aaa;
-  }
-
-  #ann-words{
-    margin-left: 2%;
-  }
-
-  #flipped::before{
+  /*creating a gray line after things*/
+  #upper::after, #ann-words::after{
     content: '';
     height: 100%;
     width: 1px;
@@ -206,6 +193,12 @@
     background-color: #aaa;
   }
 
+  #ann-words{
+    margin-left: 2%;
+    position: relative;
+    padding: 0 1% 0 0;
+  }
+
   /*flipping the little nav button to face left*/
   #flipped{
     transform: scaleX(-1);
@@ -213,7 +206,6 @@
     flex-basis: 15%;
     position: relative;
   }
-
 
   /*tasks and recommendations go here*/
   .side{
@@ -236,7 +228,7 @@
   }
 
   .tasks{
-    border-bottom: solid #aaa 0.10px;
+    border-bottom: solid #aaa 1px;
   }
 
   /*adding a shadow underneath last task*/
@@ -246,7 +238,8 @@
 
   /*dotted line between recommendaitons*/
   .rec{
-    border-bottom: dotted 0.10px #aaa;
+    border-bottom: 1px #aaa;
+    border-bottom-style: dotted;
   }
 
   /*formatting the headers 'Tasks', Recommendations, Analytics*/
@@ -304,7 +297,7 @@
     justify-content: space-between;
     width: 60px;
     height: 25px;
-    border: solid 0.10px #aaa;
+    border: solid 1px #aaa;
     border-radius: 2px;
     padding-left: 2%;
     margin-right: 1%;
@@ -318,9 +311,8 @@
   /*formatting the bar graph area*/
   .bar{
     grid-area: bar;
-    flex-direction: column;
     margin-left: 2%;
-    border-right: 0.10px #ccc solid;
+    border-right: 1px #ccc solid;
     color: #666666;
   }
 
@@ -332,9 +324,8 @@
     margin-right: 4%;
   }
 
-
-  .pie{
-    flex-basis: 28%;
+  .date-row{
+    justify-content: space-around;
   }
 
   /*adding in the CSS to create custom dropdown*/
@@ -346,7 +337,7 @@
     width: 120%;
     padding: 10% 2% 10% 2%;
     font-size: 0.9em;
-    border: 0.10px solid #aaa;
+    border: 1px solid #aaa;
   }
 
   .dropdown {
@@ -369,7 +360,7 @@
       text-decoration: none;
       display: block;
       background-color: #fff;
-      font-size: inherit;
+      font-size: 0.9em;
       border-bottom: solid #ddd 0.03px;
   }
 
@@ -388,13 +379,18 @@
     height: auto;
   }
 
+  /*styling the pie charts*/
+  .pie{
+    flex-basis: 28%;
+  }
+
   /*adding social media radials underneath bars*/
   .social{
     grid-area: social;
     justify-content: center;
     align-items: center;
     align-content: center;
-    border-right: solid 0.10px #aaa;
+    border-right: solid 1px #aaa;
     font-size: 0.8em;
   }
 
@@ -562,6 +558,7 @@
   .cards p{
     color: #fff;
     margin-left: 1%;
+    margin-right: 1%;
   }
 
 
@@ -640,7 +637,7 @@
     border-radius: 4px;
     background: #33cc66;
     padding: 3%;
-    font-size: 1em;
+    font-size: 0.97em;
   }
 
   #ad3{
@@ -690,6 +687,7 @@
     border-radius: 5px;
     border: solid #fff 5px;
     position: relative;
+    margin: 5% 0 5% 0;
   }
 
   .footer .sprite{
