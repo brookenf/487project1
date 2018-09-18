@@ -41,7 +41,7 @@
   .flex-column{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center
   }
@@ -53,8 +53,6 @@
     font-weight: bold;
     font-size: 0.8em;
     color: #fff;
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-content: center;
   }
@@ -92,32 +90,28 @@
     position: relative;
   }
 
-  /*adding in the drop shadow*/
-  .menu a::after{
-    content: url(../img/shadow.png);
-    position: absolute;
-    left: 20%;
-    bottom: -2%;
-    margin: auto;
+  .menu img{
+    margin-top: 5%;
   }
 
   a#triangle::after{
-    /*adding in the triangle*/
-      bottom: -13%;
-    	left: 50%;
-    	border: solid transparent;
-    	content: '';
-    	height: 0;
-    	width: 0;
-    	position: absolute;
-    	pointer-events: none;
-    	border-bottom-color: #fff;
-    	border-width: 20px;
-    	margin-left: -20px;
+    /*adding in the pointer triangle*/
+    bottom: -13%;
+  	left: 50%;
+  	border: solid transparent;
+  	content: '';
+  	height: 0;
+  	width: 0;
+  	position: absolute;
+  	pointer-events: none;
+  	border-bottom-color: #fff;
+  	border-width: 20px;
+  	margin-left: -20px;
   }
 
   /*main sections of the website*/
   .dash{
+    grid-area: dash;
     justify-content: space-between;
     align-content: center;
     color: #fff;
@@ -125,11 +119,11 @@
     margin-top: 3%;
     margin-bottom: 3%;
     background: #33cc66;
-    grid-area: dash;
     border-radius: 5px;
     position: relative;
   }
 
+  /*creating the search button*/
   .dash input[type="text"]{
     width: 100%;
     height: 30px;
@@ -151,31 +145,14 @@
     margin-left: 1%;
   }
 
-  /*creating the search bar*/
-  .dash span{
-    width: 250px;
-    background: #fff;
-    border-radius: 2px;
-    text-align: right;
-    margin-right: 2%;
-  }
-
-  .dash .search{
-    margin-right: 5%;
-  }
-
+  /*getting into the main body content*/
   .ann{
     grid-area: ann;
     justify-content: flex-start;
     align-content: center;
     color: #777777;
     font-size: 0.9em;
-    box-shadow: 0px 0px 2px #aaa;
-  }
-
-  /*adding in the gradient*/
-  .ann::before{
-
+    border: solid 1px #ccc;
   }
 
   /*Announcements in Orange and upper case*/
@@ -196,11 +173,12 @@
     position: absolute;
     right: 0;
     top: 0;
-    background-color: #aaa;
+    background-color: #ccc;
   }
 
   #ann-words{
     margin-left: 2%;
+    flex-basis: 70%;
     position: relative;
     padding: 0 1% 0 0;
   }
@@ -209,7 +187,6 @@
   #flipped{
     transform: scaleX(-1);
     margin: 0 2% 0 2%;
-    flex-basis: 15%;
     position: relative;
   }
 
@@ -357,13 +334,13 @@
   }
 
   .dropdown-content a {
-      color: inherit;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      background-color: #fff;
-      font-size: 0.9em;
-      border-bottom: solid #ddd 0.03px;
+    color: inherit;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #fff;
+    font-size: 0.9em;
+    border-bottom: solid #ddd 0.03px;
   }
 
   .dropdown-content a:hover{
@@ -496,13 +473,15 @@
   .contact p{
     background: #2394ee;
     margin-top: 0;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100.5%;
   }
 
   #contact-orange, #contact-green{
     box-shadow: 1px 1px 3px #aaa;
+    border: 1px #eee solid;
+    padding-top: 22%;
     border-radius: 5px;
     position: relative;
   }
@@ -511,8 +490,11 @@
     padding: 0px 10px 10px 10px;
   }
 
-  #content-orange span, #content-green span{
-    z-index: 2;
+  /*making the images hover*/
+  .man-green, .man-orange{
+    position: absolute;
+    left: 33%;
+    top: -15.5%;
   }
 
   /*making the contacts gray*/
@@ -525,7 +507,7 @@
     content: url(../img/blue_ribbon_left.png);
     position: absolute;
     left: -7%;
-    top: 36%;
+    top: 25%;
     z-index: 3;
   }
 
@@ -533,7 +515,7 @@
     content: url(../img/blue_ribbon_right.png);
     position: absolute;
     right: -7%;
-    top: 36%;
+    top: 25%;
     z-index: 3;
   }
 
@@ -600,7 +582,7 @@
     background-repeat: no-repeat;
     width: 278px;
     height: 152px;
-    box-shadow: 0px 0px 2px #222;
+    box-shadow: 0px 0px 2px #aaa;
     position: relative;
   }
 
@@ -639,6 +621,7 @@
     border-radius: 4px;
     background: #33cc66;
     padding: 3%;
+    width: 88%;
     font-size: 0.97em;
   }
 
@@ -665,7 +648,7 @@
     font-family: 'Proxima Nova', sans-serif;
     font-size: 0.8em;
     font-weight: bold;
-    /*adding in drop shadow*/
+    text-align: center;
     box-shadow: 0px -5px 10px #ddd;
   }
 
@@ -697,28 +680,56 @@
     margin-right: 8px;
   }
 
+  /*fixing the sizing of things in the footer*/
+  #footer-link, #promo-text, #logout-avatar, #social-btn{
+    position: relative;
+    margin-right: 5%;
+  }
+
+  #footer-link{
+    flex-basis: 20%;
+    color: #777;
+    font-weight: normal;
+  }
+
+  #promo-text{
+    flex-basis: 28%;
+  }
+
+  #logout-avatar, #social-btn{
+    flex-basis: 10%;
+  }
+
   /*media queries to be mobile-friendly*/
   @media screen and (max-width:800px){
     .site{
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr;
       grid-template-rows: repeat(12, auto);
       grid-template-areas:
-        'hd hd hd hd'
-        'menu menu menu menu'
-        'dash dash dash dash'
-        'ann ann ann ann'
-        'side side side side'
-        'bar bar bar bar'
-        'social social social social'
-        'contact contact contact contact'
-        'know know know know'
-        'ad ad ad ad'
-        'ft ft ft ft';
+        'hd'
+        'menu'
+        'dash'
+        'ann'
+        'side'
+        'bar'
+        'social'
+        'contact'
+        'know'
+        'ad'
+        'ft';
+    }
+
+    a#triangle::after{
+      left: 75%;
     }
 
     .menu a{
       width: 7%;
+    }
+
+    #upper::after, #ann-words::after{
+      display: none;
     }
 
     .side{
@@ -726,13 +737,17 @@
       border: none;
     }
 
+    .activity-date-graph{
+      flex-basis: 100%;
+      box-shadow: none;
+    }
+
     .pie{
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      align-items: center;
-      margin: 5% 0 5% 0;
-      border: none;
+      flex-basis: 100%;
+      margin-bottom: 5%;
     }
 
     .social{
@@ -768,7 +783,19 @@
       align-items: center;
       text-align: center;
       margin-top: 3%;
+      padding-bottom: 5%;
     }
 
+    #promo-text{
+      flex-basis: 80%;
+    }
+
+    #promo-text .sprite{
+      margin: 0 0 0 5px;
+    }
+
+    #social-btn{
+      margin-top: 5%;
+    }
   /*end of the CSS*/
   }

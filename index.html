@@ -19,7 +19,7 @@
   </head>
 
   <body class="site">
-    <div class="header">
+    <div class="header flex-row">
       <p>
         Social Stream
       </p>
@@ -44,22 +44,40 @@
     <div class="menu flex">
       <!--sprites will live inside of this div-->
       <a href="#" id="triangle">
-        <div class="dashboard"></div>
+        <div class="flex-column">
+          <div class="dashboard"></div>
+          <img src="img/shadow.png" alt="Gray shadow underneath the images" />
+        </div>
       </a>
       <a href="#">
-        <div class="customers"></div>
+        <div class="flex-column">
+          <div class="customers"></div>
+          <img src="img/shadow.png" alt="Gray shadow underneath the images" />
+        </div>
       </a>
       <a href="#">
-        <div class="messages"></div>
+        <div class="flex-column">
+          <div class="messages"></div>
+          <img src="img/shadow.png" alt="Gray shadow underneath the images" />
+        </div>
       </a>
       <a href="#">
-        <div class="promotions"></div>
+        <div class="flex-column">
+          <div class="promotions"></div>
+          <img src="img/shadow.png" alt="Gray shadow underneath the images" />
+        </div>
       </a>
       <a href="#">
-        <div class="icon-page-creator"></div>
+        <div class="flex-column">
+          <div class="icon-page-creator"></div>
+          <img src="img/shadow.png" alt="Gray shadow underneath the images" />
+        </div>
       </a>
       <a href="#">
-        <div class="analytics"></div>
+        <div class="flex-column">
+          <div class="analytics"></div>
+          <img src="img/shadow.png" alt="Gray shadow underneath the images" />
+        </div>
       </a>
     <!--closing of the menu div-->
     </div>
@@ -90,7 +108,7 @@
         </a>
       </span>
       <a href="#">
-        <span id="right-arrow">
+        <span>
           <div class="nav-small"></div>
         </span>
       </a>
@@ -286,9 +304,7 @@
     <div class="contact flex-row">
       <div class="contact-container">
         <div id="contact-green">
-          <span>
             <div class="man-green"></div>
-          </span>
           <div class="contact-words">
             <p>
               75 Contacts
@@ -302,9 +318,7 @@
       <!--orange contact-->
       <div class="contact-container">
         <div id="contact-orange">
-          <span>
-            <div class="man-orange"></div>
-          </span>
+          <div class="man-orange"></div>
           <div class="contact-words">
             <p>
               17 Customers
@@ -368,13 +382,13 @@
     <!--gray footer information goes here-->
     <div class="footer flex">
       <p>
-        <span id="footer-link">
+        <div id="footer-link">
           <a href="#">Tutorials</a> | <a href="#">Support</a> |
           <a href="#">Blog</a>
-        </span>
+        </div>
       </p>
       <!--text promos go here-->
-      <div class="flex-row">
+      <div id="promo-text" class="flex-row">
         <p>
           <a href="#">Ariel Winter</a>
           <span> likes your</span>
@@ -384,7 +398,7 @@
       </div>
 
       <!--the user's avatar and logout live here-->
-      <div class="flex-row">
+      <div class="flex-row" id="logout-avatar">
         <div class="sprite avatar"></div>
         <a href="#">
           Logout
@@ -392,7 +406,7 @@
       </div>
 
       <!--social media avatars will go here-->
-      <div class="flex-row">
+      <div id="social-btn" class="flex-row">
         <div class="sprite avatar-fb-active"></div>
         <div class="sprite avatar-twitter"></div>
         <div class="sprite avatar-foursquare"></div>
