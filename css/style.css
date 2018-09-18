@@ -585,7 +585,7 @@
   }
 
   #ad1{
-    background-image: url(../img/ad_1.png);
+    background-image: url(../img/ad-1.png);
     color: #666666;
     text-align: right;
     justify-content: flex-end;
@@ -624,7 +624,7 @@
   }
 
   #ad3{
-    background-image: url(../img/ad_3.png);
+    background-image: url(../img/ad-3.png);
     background-position: right top;
     text-align: left;
     color: #fe7f13;
